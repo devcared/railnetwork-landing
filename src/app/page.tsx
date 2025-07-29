@@ -4,10 +4,9 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Separator } from "@/components/ui/separator";
 import { useState } from "react";
-import { motion } from "motion/react";
 import Image from "next/image";
+import Link from "next/link";
 import BentoGridThirdDemo from "@/components/bento-grid-demo-3";
 import { MultiStepLoader } from "@/components/ui/multi-step-loader";
 
@@ -70,10 +69,10 @@ export default function Home() {
             
             {/* Desktop Navigation - mittig zentriert */}
             <nav className="hidden md:flex space-x-8 absolute left-1/2 transform -translate-x-1/2">
-              <a href="/" className="text-white font-medium relative group">
+              <Link href="/" className="text-white font-medium relative group">
                 Startseite
                 <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[60%] h-0.5 bg-white"></span>
-              </a>
+              </Link>
               <a href="/unternehmen" className="text-white font-medium relative group">
                 Unternehmen
                 <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[60%] h-0.5 bg-white opacity-0 group-hover:opacity-100 transition-opacity"></span>
@@ -124,13 +123,13 @@ export default function Home() {
         }`}>
           <nav className="container mx-auto px-4 py-4">
             <div className="flex flex-col space-y-4">
-              <a 
+              <Link 
                 href="/" 
                 className="text-white font-medium py-2 px-4 rounded-lg hover:bg-primary transition-colors"
                 onClick={closeMobileMenu}
               >
                 Startseite
-              </a>
+              </Link>
               <a 
                 href="/unternehmen" 
                 className="text-white font-medium py-2 px-4 rounded-lg hover:bg-primary transition-colors"
@@ -284,7 +283,7 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-sm md:text-base text-gray-700">
-                  "RailNetwork hat unsere Geschäftsprozesse revolutioniert. Die Effizienz ist unglaublich gestiegen!"
+                  &ldquo;RailNetwork hat unsere Geschäftsprozesse revolutioniert. Die Effizienz ist unglaublich gestiegen!&rdquo;
                 </p>
               </CardContent>
             </Card>
@@ -302,7 +301,7 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-sm md:text-base text-gray-700">
-                  "Die Integration war nahtlos und der Support ist erstklassig. Absolut empfehlenswert!"
+                  &ldquo;Die Integration war nahtlos und der Support ist erstklassig. Absolut empfehlenswert!&rdquo;
                 </p>
               </CardContent>
             </Card>
@@ -320,7 +319,7 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-sm md:text-base text-gray-700">
-                  "Endlich eine Lösung, die wirklich für die Bahnbranche entwickelt wurde. Perfekt!"
+                  &ldquo;Endlich eine Lösung, die wirklich für die Bahnbranche entwickelt wurde. Perfekt!&rdquo;
                 </p>
               </CardContent>
             </Card>

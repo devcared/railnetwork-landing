@@ -3,11 +3,10 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Separator } from "@/components/ui/separator";
 import { useState } from "react";
 import { motion } from "motion/react";
 import Image from "next/image";
+import Link from "next/link";
 import { MultiStepLoader } from "@/components/ui/multi-step-loader";
 
 interface Plan {
@@ -166,10 +165,10 @@ export default function Preise() {
             
             {/* Desktop Navigation - mittig zentriert */}
             <nav className="hidden md:flex space-x-8 absolute left-1/2 transform -translate-x-1/2">
-              <a href="/" className="text-gray-700 font-medium relative group">
+              <Link href="/" className="text-gray-700 font-medium relative group">
                 Startseite
                 <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[60%] h-0.5 bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></span>
-              </a>
+              </Link>
               <a href="/unternehmen" className="text-gray-700 font-medium relative group">
                 Unternehmen
                 <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[60%] h-0.5 bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></span>
@@ -220,13 +219,13 @@ export default function Preise() {
         }`}>
           <nav className="container mx-auto px-4 py-4">
             <div className="flex flex-col space-y-4">
-              <a 
+              <Link 
                 href="/" 
                 className="text-gray-700 font-medium py-2 px-4 rounded-lg hover:bg-gray-100 transition-colors"
                 onClick={closeMobileMenu}
               >
                 Startseite
-              </a>
+              </Link>
               <a 
                 href="/unternehmen" 
                 className="text-gray-700 font-medium py-2 px-4 rounded-lg hover:bg-gray-100 transition-colors"

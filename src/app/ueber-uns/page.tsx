@@ -4,10 +4,10 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Separator } from "@/components/ui/separator";
 import { useState } from "react";
 import { motion } from "motion/react";
 import Image from "next/image";
+import Link from "next/link";
 import { MultiStepLoader } from "@/components/ui/multi-step-loader";
 
 export default function UeberUns() {
@@ -68,10 +68,10 @@ export default function UeberUns() {
             
             {/* Desktop Navigation - mittig zentriert */}
             <nav className="hidden md:flex space-x-8 absolute left-1/2 transform -translate-x-1/2">
-              <a href="/" className="text-white font-medium relative group">
+              <Link href="/" className="text-white font-medium relative group">
                 Startseite
                 <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[60%] h-0.5 bg-white opacity-0 group-hover:opacity-100 transition-opacity"></span>
-              </a>
+              </Link>
               <a href="/unternehmen" className="text-white font-medium relative group">
                 Unternehmen
                 <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[60%] h-0.5 bg-white opacity-0 group-hover:opacity-100 transition-opacity"></span>
@@ -122,13 +122,13 @@ export default function UeberUns() {
         }`}>
           <nav className="container mx-auto px-4 py-4">
             <div className="flex flex-col space-y-4">
-              <a 
+              <Link 
                 href="/" 
                 className="text-white font-medium py-2 px-4 rounded-lg hover:bg-primary transition-colors"
                 onClick={closeMobileMenu}
               >
                 Startseite
-              </a>
+              </Link>
               <a 
                 href="/unternehmen" 
                 className="text-white font-medium py-2 px-4 rounded-lg hover:bg-primary transition-colors"
@@ -221,8 +221,8 @@ export default function UeberUns() {
                   Unsere Mission
                 </h3>
                 <p className="text-lg mb-6">
-                  "Wir glauben an eine Zukunft, in der intelligente Technologien den Bahnverkehr 
-                  sicherer, effizienter und nachhaltiger machen."
+                  &ldquo;Wir glauben an eine Zukunft, in der intelligente Technologien den Bahnverkehr 
+                  sicherer, effizienter und nachhaltiger machen.&rdquo;
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-center">

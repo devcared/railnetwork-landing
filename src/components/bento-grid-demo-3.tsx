@@ -3,11 +3,6 @@ import { cn } from "@/lib/utils";
 import React from "react";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import {
-  IconBoxAlignRightFilled,
-  IconClipboardCopy,
-  IconFileBroken,
-  IconSignature,
-  IconTableColumn,
   IconTrain,
   IconRoute,
   IconClock,
@@ -268,14 +263,14 @@ const SkeletonFive = () => {
           <IconUsers className="w-4 h-4 text-white" />
         </div>
         <p className="text-xs text-neutral-500">
-          Zugführer: "Alle Fahrgäste sind sicher eingestiegen. Wir fahren in 2 Minuten ab..."
+          Zugführer: &ldquo;Alle Fahrgäste sind sicher eingestiegen. Wir fahren in 2 Minuten ab...&rdquo;
         </p>
       </motion.div>
       <motion.div
         variants={variantsSecond}
         className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center justify-end space-x-2 w-3/4 ml-auto bg-white dark:bg-black"
       >
-        <p className="text-xs text-neutral-500">Fahrgast: "Danke für die Info!"</p>
+        <p className="text-xs text-neutral-500">Fahrgast: &ldquo;Danke für die Info!&rdquo;</p>
         <div className="h-6 w-6 rounded-full bg-gradient-to-r from-blue-500 to-primary shrink-0" />
       </motion.div>
     </motion.div>

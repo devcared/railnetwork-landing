@@ -8,11 +8,11 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import BentoGridThirdDemo from "@/components/bento-grid-demo-3";
-import { MultiStepLoader } from "@/components/ui/multi-step-loader";
+
 
 export default function Home() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -23,40 +23,15 @@ export default function Home() {
   };
 
   const handleDemoRequest = () => {
-    setIsLoading(true);
-    // Simuliere einen API-Call oder Demo-Anfrage
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 8000); // 8 Sekunden für alle Loading-States
+    // Demo-Anfrage Funktionalität
+    console.log("Demo angefordert");
   };
 
-  const loadingStates = [
-    {
-      text: "Demo-Anfrage wird verarbeitet...",
-    },
-    {
-      text: "Bahn-Daten werden analysiert...",
-    },
-    {
-      text: "KI-Modelle werden geladen...",
-    },
-    {
-      text: "Demo-Umgebung wird vorbereitet...",
-    },
-    {
-      text: "Ihre Demo ist bereit!",
-    },
-  ];
+
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Multi Step Loader */}
-      <MultiStepLoader 
-        loadingStates={loadingStates} 
-        loading={isLoading} 
-        duration={1600}
-        loop={false}
-      />
+
       
       {/* Header */}
       <header className="bg-primary text-white relative">

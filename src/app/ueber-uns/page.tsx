@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { useState } from "react";
-import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 import { MultiStepLoader } from "@/components/ui/multi-step-loader";
